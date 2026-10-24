@@ -1,24 +1,37 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: Evozim
 name: m2mcent_gateway
 label:
-  en_US: M2MCent 1000 AI Agent Marketplace
-  zh_Hans: M2MCent 1000 AI 智能体微服务市场
+  en_US: M2MCent Universal MCP Gateway
+  zh_Hans: M2MCent 通用 MCP 智能体网关
 description:
-  en_US: Connect your Dify agents to 1,005 specialized MCP micro-services across finance, security, biotech, and 3D. Settled via x402 on Base Mainnet.
-  zh_Hans: 将您的 Dify 智能体连接到 1,005 个涵盖金融、安全、生物医疗和 3D 的专业 MCP 微服务，支持 Base 链上 x402 结算。
+  en_US: Connect your Dify agents to 1,062 specialized AI micro-services (896 Flagship deterministic engines) across finance, security, biotech, and 3D. Settled via x402 on Base Mainnet. Vouch Grade A certified.
+  zh_Hans: 将您的 Dify 智能体连接到 1,062 个涵盖金融、安全、生物医疗和 3D 的专业 MCP 微服务（896 个旗舰确定性引擎），支持 Base 链上 x402 结算，通过 Vouch Grade A 认证。
 icon: icon.svg
-category: utilities
-tags:
-  - mcp
-  - x402
-  - base-mainnet
-  - ai-agents
-  - tools
+icon_dark: icon_dark.svg
+repo: https://github.com/Evozim/m2mcent
+contact: support@m2mcent.com
 resource:
-  memory: 256
-privacy_policy: https://m2mcent.com/privacy
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: false
 plugins:
   tools:
     - provider/m2mcent.yaml
+meta:
+  version: 0.0.2
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-08-19T20:00:00.000000Z
+privacy: PRIVACY.md
+verified: false
